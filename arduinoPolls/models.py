@@ -17,7 +17,7 @@ class Arduino(models.Model):
 
     def getNewArduino() -> str:
         new = Arduino.objects.create()
-        return f"{new.id}, {new.Nombre}"
+        return f"@{new.id}, {new.Nombre}"
 
 class Lecturas(models.Model):
     Arduino = models.ForeignKey(Arduino, unique=False, on_delete=models.CASCADE)
